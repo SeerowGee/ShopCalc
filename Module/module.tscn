@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://caktft4887fli"]
+
+[ext_resource type="Script" uid="uid://q2c4d5bpvt34" path="res://Module/module.gd" id="1_cbhdo"]
+[ext_resource type="FontFile" uid="uid://2b5nekjl2sm3" path="res://PlayfairDisplay-VariableFont_wght.ttf" id="2_r2l70"]
+
+[node name="Module" type="Node2D" unique_id=296555426]
+script = ExtResource("1_cbhdo")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=381693492]
+offset_left = 2.0
+offset_right = 764.0
+offset_bottom = 149.0
+
+[node name="NameLabel" type="Label" parent="." unique_id=1407985483]
+visible = false
+offset_left = 52.0
+offset_top = 29.0
+offset_right = 237.0
+offset_bottom = 116.0
+theme_override_colors/font_color = Color(0.8392157, 0.3647059, 0.4862745, 1)
+theme_override_fonts/font = ExtResource("2_r2l70")
+theme_override_font_sizes/font_size = 64
+text = "Name"
+
+[node name="NumLabel" type="Label" parent="." unique_id=1194984232]
+visible = false
+offset_left = 470.0
+offset_top = 31.0
+offset_right = 547.0
+offset_bottom = 118.0
+theme_override_colors/font_color = Color(0.8392157, 0.3647059, 0.4862745, 1)
+theme_override_fonts/font = ExtResource("2_r2l70")
+theme_override_font_sizes/font_size = 64
+text = "00"
+
+[node name="Cost" type="LineEdit" parent="." unique_id=474229016]
+offset_left = 518.0
+offset_top = 26.0
+offset_right = 758.0
+offset_bottom = 121.0
+theme_override_colors/font_color = Color(0.8392157, 0.3647059, 0.4862745, 1)
+theme_override_colors/font_placeholder_color = Color(0.8392157, 0.3647059, 0.4862745, 1)
+theme_override_fonts/font = ExtResource("2_r2l70")
+theme_override_font_sizes/font_size = 64
+placeholder_text = "Cost"
+flat = true
+
+[node name="Item" type="LineEdit" parent="." unique_id=449903097]
+offset_left = 49.0
+offset_top = 26.0
+offset_right = 289.0
+offset_bottom = 121.0
+theme_override_colors/font_color = Color(0.8392157, 0.3647059, 0.4862745, 1)
+theme_override_colors/font_placeholder_color = Color(0.8392157, 0.3647059, 0.4862745, 1)
+theme_override_fonts/font = ExtResource("2_r2l70")
+theme_override_font_sizes/font_size = 64
+placeholder_text = "Item"
+flat = true
+
+[connection signal="text_submitted" from="Cost" to="." method="_on_cost_text_submitted"]

@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://bjp8s1hyueqha"]
+
+[ext_resource type="Script" uid="uid://be0beh2qqusio" path="res://Main/main.gd" id="1_yh5la"]
+[ext_resource type="FontFile" uid="uid://2b5nekjl2sm3" path="res://PlayfairDisplay-VariableFont_wght.ttf" id="3_qvhan"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gr22w"]
+bg_color = Color(0.9843137, 0.9372549, 0.98039216, 1)
+
+[node name="Main" type="Node2D" unique_id=678724810]
+script = ExtResource("1_yh5la")
+
+[node name="Panel" type="Panel" parent="." unique_id=1446274163]
+offset_left = -763.0
+offset_top = -372.0
+offset_right = 1888.0
+offset_bottom = 1116.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_gr22w")
+
+[node name="NumLabel" type="Label" parent="." unique_id=635956143]
+offset_left = 1568.0
+offset_top = 829.0
+offset_right = 1645.0
+offset_bottom = 916.0
+theme_override_colors/font_color = Color(0.8392157, 0.3647059, 0.4862745, 1)
+theme_override_fonts/font = ExtResource("3_qvhan")
+theme_override_font_sizes/font_size = 64
+text = "00"
+
+[node name="Button" type="Button" parent="." unique_id=663360451]
+offset_left = -535.0
+offset_top = -288.0
+offset_right = -470.0
+offset_bottom = -143.0
+theme_override_font_sizes/font_size = 100
+text = "+"
+
+[node name="ModuleSpawn" type="Marker2D" parent="." unique_id=1530522890]
+position = Vector2(145, -255)
+
+[node name="ModuleSpawn2" type="Marker2D" parent="." unique_id=1864558055]
+position = Vector2(145, 103)
+
+[node name="ModuleSpawn3" type="Marker2D" parent="." unique_id=813362840]
+position = Vector2(144, -80)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1700167744]
+position = Vector2(575, 316)
+zoom = Vector2(0.5, 0.5)
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
