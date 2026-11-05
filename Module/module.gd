@@ -18,3 +18,8 @@ func _on_color_rect_mouse_entered() -> void:
 
 func _on_color_rect_mouse_exited() -> void:
 	mouse_entered = false
+
+
+func _on_button_pressed() -> void:
+	SignalBus.erase.emit(self)
+	queue_free()
